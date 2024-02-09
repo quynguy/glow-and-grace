@@ -20,6 +20,7 @@ section {
     padding: 2rem 9%;
 }
 
+/* header & navbar styling */
 header #toggler {
     display: none;
 }
@@ -37,7 +38,6 @@ header {
     z-index: 1000;
     box-shadow: 0 .5rem 1rem rgba(241, 149, 149, 0.1);
 }
-
 
 header .logo {
     font-size: 3rem;
@@ -66,6 +66,10 @@ header .icons a {
     margin-left: 1.5rem;
 }
 
+header .icons a:hover {
+    color: var(--pink);
+}
+
 header .fa-bars {
     font-size: 3rem;
     color: #333;
@@ -74,4 +78,68 @@ header .fa-bars {
     cursor: pointer;
     border: .1rem solid rgba(0, 0, 0, .3);
     display: none;
+}
+
+/* home.ejs / main container - about */
+
+main section {
+    padding: 15rem 9% 2rem;
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+}
+
+.about .row .image-container {
+    flex: 1 1 40rem;
+    position: relative;
+}
+
+.about .row .image-container img {
+    width: 100%;
+    border: 1.5rem solid #fff;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    height: 100%;
+    object-fit: cover;
+}
+
+.about .row .content {
+    flex: 1 1 40rem;
+}
+
+
+
+.about .content h3 {
+    font-size: 3rem;
+    color: #333;
+}
+
+.about .row .content p {
+    font-size: 1.5rem;
+    color: #999;
+    padding: .5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 5rem;
+    border-radius: 5rem;
+    background: pink;
+    color: #6b6565;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: white;
 }
