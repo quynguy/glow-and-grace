@@ -117,7 +117,7 @@ main section {
     width: 100%;
     border: 1.5rem solid #fff;
     border-radius: .5rem;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    /* box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1); */
     height: 100%;
     object-fit: cover;
 }
@@ -160,7 +160,7 @@ main section {
 /* home.ejs - section - icons */
 
 .icons-container {
-    background: #eee;
+    background: #F4F4F4;
     display: flex;
     flex-wrap: wrap; 
     gap: 1.5rem;
@@ -230,6 +230,7 @@ main section {
 
 .products .box-container .box .image img {
     height: 25rem;
+    margin-top: 6rem;
 
 }
 
