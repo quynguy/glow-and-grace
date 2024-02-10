@@ -326,7 +326,7 @@ main section {
 }
 
 .review .box-container .box .stars i {
-    color: var(--pink);
+    color: rgb(219, 131, 153);
     font-size: 2rem;
 }
 
@@ -338,7 +338,7 @@ main section {
 }
 
 .review .box-container .box .user {
-    display: var(--pink);
+    display: rgb(219, 131, 153);
     align-items: center;
     padding-top: 2rem;
 
@@ -360,4 +360,145 @@ main section {
 .review .box-container .box .user span {
     font-size: 1.5rem;
     color: #999;
+}
+
+/* home.ejs - footer section */
+
+.footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 5rem;
+}
+
+.footer .box-container .box {
+    flex: 1 1 25rem;
+}
+
+.footer .box-container .box h3 {
+    color: #333;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a {
+    display: block;
+    color: #666;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a:hover {
+    color: rgb(219, 131, 153);
+    text-decoration: underline;
+}
+
+.footer .box-container .box img {
+    margin-top: 1rem;
+    height: 35px;
+    width: auto;
+}
+
+
+
+.footer .credit {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 5rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    color: #333;
+    border-top: .1rem solid rgb(0, 0, 0, .1);
+    box-shadow: 0 .5rem 1rem rgba(241, 149, 149, 0.1);
+}
+
+
+.footer .credit span {
+    color: rgb(219, 131, 153);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* media queries for responsiveness */
+
+
+
+
+
+
+
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+    
+    header {
+        padding: 2rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    header .fa-bars{
+        display: block;
+    }
+    
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #eee;
+        border-top: .1rem solid rgba(0, 0, 0, .1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header #toggler:checked ~ .navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a {
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: .1rem solid rgba(0, 0, 0, .1);
+        display: block;
+    }
+
+    .home .content h3 {
+        font-size: 5rem;
+    }
+
+    .home .content span {
+        font-size: 2.5rem;
+    }
+
+    .icons-container .icons h3 {
+        font-size: 2rem;
+    }
+    
+    .icons-container .icons span {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .heading {
+        font-size: 3rem;
+
+    }
+
 }
