@@ -286,14 +286,14 @@ main section {
     color: #333;
 }
 
-.products .box-container .box  .content h3 .price {
+.products .box .content .price {
     font-size: 2.5rem;
     color: rgb(219, 131, 153);
     font-weight: bolder;
     padding-top: 1rem;
 }
 
-.products .box-container .box  .content h3 .price span {
+.products .box-container .content .price span {
     font-size: 1.5rem;
     color: #999;
     font-weight: lighter;
