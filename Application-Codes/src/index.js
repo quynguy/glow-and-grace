@@ -2,7 +2,14 @@ const express = require('express');
 const path = require('path');
 const bcrypt = require('bcrypt');
 
+// models 
+
+
 const app = express();
+
+
+// convert data into json format
+
 
 // view engine setup
 app.set('view engine', 'ejs');
@@ -34,6 +41,14 @@ app.get("/signup", (req, res) => {
 app.get("/products", (req, res) => {
     res.render("products");
 });
+
+
+
+
+// Register User Logic
+
+
+// Login User Logic
 
 
 
