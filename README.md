@@ -20,6 +20,9 @@ Enjoy a consistent and user-friendly experience whether you're shopping on your 
 - EXPRESS JS
 - NODE JS
 
+# Deployment
+Glow & Grace is deployed on render. Check it out <a href="https://glowandgrace.onrender.com/">here.</a>
+
 ## Preview 
 ![image](https://github.com/quynguy/glow-and-grace/assets/106893103/b5319a74-9bfd-4c72-9554-ea7bb3bb5847)
 ![image](https://github.com/quynguy/glow-and-grace/assets/106893103/3f9c1889-c46a-4551-b94d-28a39f566aed)
