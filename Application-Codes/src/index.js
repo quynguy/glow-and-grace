@@ -46,6 +46,9 @@ app.get("/products", (req, res) => {
     res.render("products");
 });
 
+app.get("/contact", (req, res) => {
+    res.render("contact");
+});
 
 
 
