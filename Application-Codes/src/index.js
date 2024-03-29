@@ -1,16 +1,24 @@
 const express = require('express');
 const path = require('path');
+const app = express();
 const bcrypt = require('bcrypt');
+const session = require('express-session');
 
 // models 
-const userCollection = require("./config");
+const users = require("./config");
+const loginController = require("../controllers/Login");
+const registerController = require("../controllers/SignUp");
 
-const app = express();
 
+// session
+app.use(session({
+    secret: process.env.SecretKey,
+    resave: false,
+    saveUninitialized: false
+}))
 
 // convert data into json format
 app.use(express.json());
-
 app.use(express.urlencoded({ extended: true }));
 
 
@@ -20,6 +28,8 @@ app.set('view engine', 'ejs');
 
 // static folder path
 app.use(express.static("public"));
+
+app.use(require('../routes/cart'));
 
 // routes 
 app.get("/", (req, res) => {
@@ -50,55 +60,15 @@ app.get("/contact", (req, res) => {
     res.render("contact");
 });
 
-
-
-// Register User Logic
-app.post("/signup", async (req, res) => {
-
-    // get data from body > send through sign up form
-    const data = {
-        name: req.body.username,
-        password: req.body.password
-    }
-
-    // check if user already exists in the database
-    const userExists = await userCollection.findOne({ name: data.name });
-    if (userExists) {
-        res.send("User already exists. Please choose a different username.");
-    } else {
-        // hash password (bcrypt)
-        const saltRounds = 10;
-        const hasedPassword = await bcrypt.hash(data.password, saltRounds);
-
-        data.password = hasedPassword; // replace hash password with original password
-
-        const userdata = await userCollection.insertMany(data);
-        console.log(userdata);
-    }
-})
-
-// Login User Logic
-app.post ("/login", async (req, res) => {
-    try {
-        const check = await userCollection.findOne({ name: req.body.username });
-        if(!check) {
-            res.send("Unable to locate user. Please sign up.");
-        }
-
-        // compare hash password from database to plain text 
-
-        const passwordMatch = await bcrypt.compare(req.body.password, check.password);
-        if (passwordMatch) {
-            res.render("home");
-
-        } else {
-            req.send("Incorrect password. Please try again.");
-        }
-    }catch{
-        res.send("Incorrect Password or unable to locate user. Please sign up.");
-    }
-
+app.get("/cart/:id", (req, res) => {
+    res.render("cart", { id: req.params.id });
 });
+
+
+// post 
+app.post('/login', loginController);
+
+app.post('/signup', registerController);
 
 
 

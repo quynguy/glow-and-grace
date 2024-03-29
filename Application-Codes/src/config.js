@@ -12,19 +12,5 @@ connect.then(() => {
     console.log("Database Connection FAILED");
 });
 
-// Mongoose Schemas
 
-const LoginSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true
-    },
-    password: {
-        type: String,
-        required: true
-    }
-});
 
-// collection parts
-const userCollection = new mongoose.model("users", LoginSchema);
-module.exports = userCollection;
