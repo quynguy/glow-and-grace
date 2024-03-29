@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcrypt');
-
 const userCollection = require("../models/Users");
 
 // Login User Logic
@@ -21,7 +20,7 @@ router.post ("/login", async (req, res) => {
             return req.send("Incorrect password. Please try again.");
         }
     }catch{
-        return res.send("Incorrect Password or unable to locate user. Please sign up.");
+        returnres.send("Incorrect Password or unable to locate user. Please sign up.");
     }
 
 });

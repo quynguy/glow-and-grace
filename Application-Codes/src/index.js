@@ -3,6 +3,7 @@ const path = require('path');
 const app = express();
 const bcrypt = require('bcrypt');
 const session = require('express-session');
+const passport = require('passport');
 
 // models 
 const users = require("./config");
@@ -16,6 +17,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }))
+
 
 // convert data into json format
 app.use(express.json());

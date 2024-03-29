@@ -12,12 +12,14 @@ router.post("/signup", async (req, res) => {
 
     // get data from body > send through sign up form
     const data = {
-        name: req.body.username,
+        firstname: req.body.firstname,
+        lastname: req.body.lastname,
+        name: req.body.name,
         password: req.body.password
     }
 
     // check if user already exists in the database
-    const userExists = await userCollection.findOne({ name: data.name });
+    const userExists = await userCollection.findOne({ name: data.username });
     if (userExists) {
         res.send("User already exists. Please choose a different username.");
     } else {

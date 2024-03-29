@@ -30,29 +30,31 @@
       </div>
     </header>
 
-
-    <div class="form-container">
-        <h2>Sign Up</h2>
-        <form action="/signup" method="post">
-            <div class="form-group">
-              <label for="fname">First Name:</label>
-              <input type="text" id="name" name="fname" placeholder="First Name" required autocomplete="off">
-            </div>
-            <div class="form-group">
-              <label for="lname">Last Name:</label>
-              <input type="text" id="name" name="lname" placeholder="Last Name" required autocomplete="off">
-            </div>
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="name" name="username" placeholder="Enter your username" required autocomplete="off">
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
-            </div>
-            <button type="submit" class="submit-btn">Sign Up</button>
-        </form>
-    </div>
+    <section class="form">
+      <div class="form-container">
+          <h2>Sign Up</h2>
+          <form action="/signup" method="post">
+              <div class="form-group">
+                <label for="firstname">First Name:</label>
+                <input type="text" id="name" name="firstname" placeholder="First Name" required autocomplete="off">
+              </div>
+              <div class="form-group">
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="name" name="lastname" placeholder="Last Name" required autocomplete="off">
+              </div>
+              <div class="form-group">
+                  <label for="name">Username:</label>
+                  <input type="text" id="name" name="name" placeholder="Enter your username" required autocomplete="off">
+              </div>
+              <div class="form-group">
+                  <label for="password">Password:</label>
+                  <input type="password" id="password" name="password" placeholder="Enter your password" required>
+              </div>
+              <button type="submit" class="submit-btn">Sign Up</button>
+          </form>
+          <p>I'm a registered user. <a href="/login"> Go back. </a></p>
+      </div>
+    </section>
 
 	<script src="index.js"></script>
   </body>

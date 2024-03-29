@@ -31,30 +31,33 @@
       </div>
     </header>
 
-    
-    <div class="form-container">
-        <h2>Login</h2>
-        <form action="/login" method="post">
-            <div class="form-group">
-              <label for="fname">First Name:</label>
-              <input type="text" id="name" name="fname" placeholder="First Name" required autocomplete="off">
-            </div>
-            <div class="form-group">
-              <label for="lname">Last Name:</label>
-              <input type="text" id="name" name="lname" placeholder="Last Name Name" required autocomplete="off">
-            </div>
-            <div class="form-group">
-              <label for="username">Username:</label>
-              <input type="text" id="name" name="username" placeholder="Enter your username" required autocomplete="off">
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
-            </div>
-            <button type="submit" class="submit-btn">Login</button>
-        </form>
-        <p>Don't have an account? <a href="/signup"> Sign Up Here </a></p>
-    </div>
+    <section>
+      <div class="form-container">
+          <h2>Login</h2>
+          <form action="/login" method="post">
+              <div class="form-group">
+                <label for="fname">First Name:</label>
+                <input type="text" id="name" name="fname" placeholder="First Name" required autocomplete="off">
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name:</label>
+                <input type="text" id="name" name="lname" placeholder="Last Name Name" required autocomplete="off">
+              </div>
+              <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="name" name="username" placeholder="Enter your username" required autocomplete="off">
+              </div>
+              <div class="form-group">
+                  <label for="password">Password:</label>
+                  <input type="password" id="password" name="password" placeholder="Enter your password" required>
+              </div>
+              <button type="submit" class="submit-btn">Login</button>
+          </form>
+          <p>Don't have an account? <a href="/signup"> Sign Up Here </a></p>
+      </div>
+    </section>
+
+  
 
 	<script src="index.js"></script>
   </body>
