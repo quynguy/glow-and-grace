@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const LoginSchema = new mongoose.Schema({
-    name: {
+    username: {
         type: String,
         required: true
     },
@@ -9,6 +9,7 @@ const LoginSchema = new mongoose.Schema({
         type: String,
         required: true
     }
+
 });
 
 const userCollection = new mongoose.model("users", LoginSchema);
