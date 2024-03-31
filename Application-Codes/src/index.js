@@ -1,6 +1,6 @@
 const express = require('express');
-const path = require('path');
 const app = express();
+const path = require('path');
 const bcrypt = require('bcrypt');
 const session = require('express-session');
 const passport = require('passport');
@@ -9,6 +9,17 @@ const passport = require('passport');
 const users = require("./config");
 const loginController = require("../controllers/Login");
 const registerController = require("../controllers/SignUp");
+
+
+// authentication for products to be added to cart
+const isAuthenticated = (req, res, next) => {
+    if (req.session && req.session.checkID) {
+        return next();
+    }
+    res.redirect("/login");
+}
+
+const cartRoutes = require('../routes/cart');
 
 
 // session
@@ -30,8 +41,10 @@ app.set('view engine', 'ejs');
 
 // static folder path
 app.use(express.static("public"));
+app.use(express.static("src"));
 
-app.use(require('../routes/cart'));
+// app.use('/cart', cartRoutes);
+
 
 // routes 
 app.get("/", (req, res) => {

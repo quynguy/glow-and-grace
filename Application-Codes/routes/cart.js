@@ -1,4 +1,4 @@
-// Product page route
+// Cart Page - Must be logged in to see added products
 const express = require('express');
 const router = express.Router();
 

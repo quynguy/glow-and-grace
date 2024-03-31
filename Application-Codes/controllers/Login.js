@@ -20,7 +20,7 @@ router.post ("/login", async (req, res) => {
             return req.send("Incorrect password. Please try again.");
         }
     }catch{
-        returnres.send("Incorrect Password or unable to locate user. Please sign up.");
+        return res.send("Incorrect Password or unable to locate user. Please sign up.");
     }
 
 });

@@ -30,24 +30,56 @@
             <a href="/login" class="fas fa-user"></a>
         </div>
     </header>
-
-    <h1>Cart</h1>
-    <% if (isAuthenticated) { %>
-        <p>User is logged in</p>
-    <% } else { %>
-        <p>Please<a href="/login"> login </a> to load cart contents.</p>
-    <% } %>
+    
 
     <main>
-        <div class="user-container">
-            <div class="welcome-message">
-                <% if (username) { %>
-                    <p>Welcome, <%= username.name %>!</p>
-                <% } %>
+        <div class="cart-container">
+            <div class="cart-grid">
+                <div class="cart-product">
+                    <h2>Products</h2>
+                   <div class="products">
+                        <div class="product-image">
+                            <img src="" alt="product image">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">
+                                <h1> name</h1>
+                                <div class="product-description">
+                                    <h1> description</h1>
+                                </div>
+                            </div>
+                            
+                        </div>
+                   </div>
+                    
+                </div>
+                <div class="cart-price">
+                    <h1>price</h1>
+                        <div class="price">
+                            <div>
+                            <h2> original price </h2>
+                            <h2>sales price  </h2>
+                            </div>
+                        </div>
+                    <h1>total</h1>
+                    <div class="total">
+                        <div>
+                        <h2> total price </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-summary">
+                    <h1>summary</h1>
+                    <div class="summary">
+                        <h1>summary info</h1>
+                    </div>
+                </div>
             </div>
         </div>
+        
     </main>
    
 	<script src="index.js"></script>
+    <script src="/src/main.js"></script>
   </body>
 </html>
