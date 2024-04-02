@@ -93,7 +93,7 @@ header .fa-bars {
 /* home.ejs / main container - cart */
 
 main {
-    padding: 10rem 9%;
+    padding: 5rem 9%;
     position: relative;
 }
 
@@ -337,12 +337,13 @@ aside {
 .summary {
   background-color: #eee;
   border: 1px solid #aaa;
-  padding: 1rem;
+  padding: 1.25rem;
   position: fixed;
   width: 250px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  margin-top: 20px;
 }
 
 .summary-total-items {
@@ -441,10 +442,12 @@ aside {
 
 @media screen and (max-width: 640px) {
   aside,
-  .basket,
   .summary,
   .item,
   .remove {
+    width: 100%;
+  }
+  .basket {
     width: 100%;
   }
   .basket-labels {
@@ -491,7 +494,10 @@ aside {
 @media screen and (min-width: 641px) and (max-width: 960px) {
   aside {
     padding: 0 1rem 0 0;
-    width: 35%;
+    width: 100%;
+  }
+  .basket {
+    width: 80%;
   }
   .summary {
     width: 100%;

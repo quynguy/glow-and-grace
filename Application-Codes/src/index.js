@@ -9,6 +9,7 @@ const passport = require('passport');
 const users = require("./config");
 const loginController = require("../controllers/Login");
 const registerController = require("../controllers/SignUp");
+const addTocartController = require("../controllers/addToCart");
 
 
 // authentication for products to be added to cart
@@ -79,11 +80,16 @@ app.get("/cart/:id", (req, res) => {
     res.render("cart", { id: req.params.id });
 });
 
+app.get("/cart/:id", (req, res) => {
+    res.json(cart);
+})
+
 
 // post 
 app.post('/login', loginController);
 
 app.post('/signup', registerController);
+app.post('/cart', addTocartController);
 
 
 

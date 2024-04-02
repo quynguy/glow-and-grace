@@ -83,6 +83,12 @@ header .icons a:hover {
     color: rgb(219, 131, 153);
 }
 
+.cart-message {
+    display: none;
+    color: green;
+    font-weight: bold;
+}
+
 header .fa-bars {
     font-size: 3rem;
     color: #333;

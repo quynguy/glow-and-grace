@@ -1,12 +1,14 @@
 console.log("js loaded");
 
 
+
 /* Set values + misc */
 var promoCode;
 var promoPrice;
 var fadeTime = 300;
 var expressCost = 12;
 var groundCost = 5;
+
 
 /* Assign actions */
 $('.quantity input').change(function() {
