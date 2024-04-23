@@ -2,9 +2,9 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const bcrypt = require('bcrypt');
-const session = require('express-session');
-const passport = require('passport');
-const MongoDBStore = require('connect-mongodb-session')(session);
+// const session = require('express-session');
+// const passport = require('passport');
+// const MongoDBStore = require('connect-mongodb-session')(session);
 
 // models 
 const users = require("./config");
@@ -13,30 +13,30 @@ const registerController = require("../controllers/SignUp");
 const addTocartController = require("../controllers/addToCart");
 
 
-const store = new MongoDBStore({
-    uri: 'mongodb://localhost:3030/',
-    collection: 'sessions'
-});
+// const store = new MongoDBStore({
+//     uri: 'mongodb://localhost:3030/',
+//     collection: 'sessions'
+// });
 
 // authentication for products to be added to cart
-const isAuthenticated = (req, res, next) => {
-    if (req.session && req.session.checkID) {
-        return next();
-    }
-    res.redirect("/login");
-}
+// const isAuthenticated = (req, res, next) => {
+//     if (req.session && req.session.checkID) {
+//         return next();
+//     }
+//     res.redirect("/login");
+// }
 
-const cartRoutes = require('../routes/cart');
+// const cartRoutes = require('../routes/cart');
 
 
 // session
-app.use(session({
-    secret: process.env.SecretKey,
-    resave: false,
-    saveUninitialized: false
-}))
+// app.use(session({
+//     secret: process.env.SecretKey,
+//     resave: false,
+//     saveUninitialized: false
+// }))
 
-console.log("Secret Key:", process.env.SecretKey);
+// console.log("Secret Key:", process.env.SecretKey);
 
 
 
