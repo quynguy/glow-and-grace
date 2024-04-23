@@ -4,12 +4,18 @@ const path = require('path');
 const bcrypt = require('bcrypt');
 const session = require('express-session');
 const passport = require('passport');
+const MongoDBStore = require('connect-mongodb-session')(session);
 
 // models 
 const users = require("./config");
 const loginController = require("../controllers/Login");
 const registerController = require("../controllers/SignUp");
 
+
+const store = new MongoDBStore({
+    uri: 'mongodb://localhost:3030/',
+    collection: 'sessions'
+});
 
 // authentication for products to be added to cart
 const isAuthenticated = (req, res, next) => {
@@ -28,6 +34,9 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }))
+
+console.log("Secret Key:", process.env.SecretKey);
+
 
 
 // convert data into json format
