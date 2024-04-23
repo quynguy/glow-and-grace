@@ -8,8 +8,8 @@ const bcrypt = require('bcrypt');
 
 // models 
 const users = require("./config");
-const loginController = require("../controllers/Login");
-const registerController = require("../controllers/SignUp");
+// const loginController = require("../controllers/Login");
+// const registerController = require("../controllers/SignUp");
 const addTocartController = require("../controllers/addToCart");
 
 
@@ -95,9 +95,9 @@ app.get("/cart/:id", (req, res) => {
 
 
 // post 
-app.post('/login', loginController);
+// app.post('/login', loginController);
 
-app.post('/signup', registerController);
+// app.post('/signup', registerController);
 app.post('/cart', addTocartController);
 
 
